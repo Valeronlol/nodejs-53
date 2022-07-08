@@ -1,0 +1,14 @@
+version: '3.9'
+
+volumes:
+  tms_db_data:
+
+services:
+  tms_db:
+    image: postgres:14.4-alpine
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - tms_db_data:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:5432"

@@ -9,7 +9,7 @@ const moods = [
 
 const getRandomArrayEl = arr => arr[Math.floor(Math.random() * arr.length)]
 
-const fakeUser = (new Array(500))
+const fakeUser = (new Array(5000000))
   .fill(null)
   .map((_, i) => ({
     firstName: faker.name.firstName(),

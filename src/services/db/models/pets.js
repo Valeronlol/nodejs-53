@@ -5,9 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Pets extends Model {
     static associate(models) {
-      models.Pets.hasOne(models.User, {
-        foreignKey: 'userId'
-      })
+      models.Pets.belongsTo(models.User)
     }
   }
   Pets.init({
